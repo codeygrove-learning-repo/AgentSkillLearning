@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "weather": {
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "path/to/WeatherMcpServer/WeatherMcpServer.csproj"
+      ]
+    }
+  }
+}
