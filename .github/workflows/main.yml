@@ -7,11 +7,12 @@ jobs:
   run-agent:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Create GitHub Issue
         id: create_issue
         run: |
           # Use the GitHub CLI to create the issue
-          ISSUE_URL=$(gh issue create \
+          ISSUE_URL=$(gh issue create \            
             --title "${{ github.event.client_payload.ticket_key }}: ${{ github.event.client_payload.summary }}" \
             --body "## Jira Requirements
             ${{ github.event.client_payload.description }}
