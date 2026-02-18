@@ -1,0 +1,33 @@
+name: Trigger Copilot Agent
+on:
+  repository_dispatch:
+    types: [jira_ticket_ready]
+
+jobs:
+  start_agent_task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Create GitHub Issue
+        id: create_issue
+        run: |
+          # We create an issue because Copilot Workspace works best with Issue context
+          ISSUE_URL=$(gh issue create \
+            --title "${{ github.event.client_payload.ticket_key }}: ${{ github.event.client_payload.summary }}" \
+            --body "## Requirements
+            ${{ github.event.client_payload.description }}
+            
+            ## Acceptance Criteria
+            ${{ github.event.client_payload.criteria }}
+            
+            @github-copilot-workspace please implement this.")
+          echo "issue_url=$ISSUE_URL" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Notify Jira
+        # This tells the BA that the Agent has started
+        run: |
+          echo "Agent is now working on ${{ steps.create_issue.outputs.issue_url }}"
