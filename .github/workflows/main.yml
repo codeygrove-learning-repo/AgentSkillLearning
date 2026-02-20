@@ -18,9 +18,8 @@ jobs:
             ${{ github.event.client_payload.description }}
             
             ## Acceptance Criteria
-            ${{ github.event.client_payload.criteria }}
-            
-            @github-copilot-workspace please implement this task.")
+            ${{ github.event.client_payload.criteria }}" \
+            --assignee '"@copilot"')
           echo "issue_url=$ISSUE_URL" >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
