@@ -1,0 +1,138 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "GoogleCalendarMcpServer/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Hosting": "10.0.1",
+          "ModelContextProtocol": "0.5.0-preview.1",
+          "ModelContextProtocol.AspNetCore": "0.5.0-preview.1"
+        },
+        "runtime": {
+          "GoogleCalendarMcpServer.dll": {}
+        }
+      },
+      "Microsoft.Extensions.AI.Abstractions/10.0.0": {
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.AI.Abstractions.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.55903"
+          }
+        }
+      },
+      "Microsoft.Extensions.Hosting/10.0.1": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.EventLog": "10.0.1"
+        }
+      },
+      "Microsoft.Extensions.Logging.EventLog/10.0.1": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "10.0.1"
+        }
+      },
+      "ModelContextProtocol/0.5.0-preview.1": {
+        "dependencies": {
+          "ModelContextProtocol.Core": "0.5.0-preview.1"
+        },
+        "runtime": {
+          "lib/net10.0/ModelContextProtocol.dll": {
+            "assemblyVersion": "0.5.0.0",
+            "fileVersion": "0.5.0.0"
+          }
+        }
+      },
+      "ModelContextProtocol.AspNetCore/0.5.0-preview.1": {
+        "dependencies": {
+          "ModelContextProtocol": "0.5.0-preview.1"
+        },
+        "runtime": {
+          "lib/net10.0/ModelContextProtocol.AspNetCore.dll": {
+            "assemblyVersion": "0.5.0.0",
+            "fileVersion": "0.5.0.0"
+          }
+        }
+      },
+      "ModelContextProtocol.Core/0.5.0-preview.1": {
+        "dependencies": {
+          "Microsoft.Extensions.AI.Abstractions": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/ModelContextProtocol.Core.dll": {
+            "assemblyVersion": "0.5.0.0",
+            "fileVersion": "0.5.0.0"
+          }
+        }
+      },
+      "System.Diagnostics.EventLog/10.0.1": {
+        "runtimeTargets": {
+          "runtimes/win/lib/net10.0/System.Diagnostics.EventLog.Messages.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.125.57005"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GoogleCalendarMcpServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.AI.Abstractions/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PHeuDm2tC6wJPEQvleUr2kNQaIMNqSf3aEbzkIPlZyQ0+0SYI9SwXVLdGD1NPBI+xB+Vb2lxZKhrFlIf9kP9WA==",
+      "path": "microsoft.extensions.ai.abstractions/10.0.0",
+      "hashPath": "microsoft.extensions.ai.abstractions.10.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Hosting/10.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0jjfjQSOFZlHhwOoIQw0WyzxtkDMYdnPY3iFrOLasxYq/5J4FDt1HWT8TktBclOVjFY1FOOkoOc99X7AhbqSIw==",
+      "path": "microsoft.extensions.hosting/10.0.1",
+      "hashPath": "microsoft.extensions.hosting.10.0.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Logging.EventLog/10.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Zp9MM+jFCa7oktIug62V9eNygpkf+6kFVatF+UC/ODeUwIr5givYKy8fYSSI9sWdxqDqv63y1x0mm2VjOl8GOw==",
+      "path": "microsoft.extensions.logging.eventlog/10.0.1",
+      "hashPath": "microsoft.extensions.logging.eventlog.10.0.1.nupkg.sha512"
+    },
+    "ModelContextProtocol/0.5.0-preview.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QJpuNEnMZLJmvASbZ2nvMqENTZk3HYF83IihoHs3EJ5vTlz4sYjji9bXh2HP5UxpXIdHGn0iuHu0X2Tpq2zilw==",
+      "path": "modelcontextprotocol/0.5.0-preview.1",
+      "hashPath": "modelcontextprotocol.0.5.0-preview.1.nupkg.sha512"
+    },
+    "ModelContextProtocol.AspNetCore/0.5.0-preview.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4KYK/rc6E8uuSJorludY/0Gpcm0wCXT5BGyZPcLRHisMT+cqW/P6lOv5luQZvy6iOxhwMmTMmY7DzU+VKVvjaw==",
+      "path": "modelcontextprotocol.aspnetcore/0.5.0-preview.1",
+      "hashPath": "modelcontextprotocol.aspnetcore.0.5.0-preview.1.nupkg.sha512"
+    },
+    "ModelContextProtocol.Core/0.5.0-preview.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-33V1Druluweou6x2LN6MSMbhiwHOYZxTUEJ1okFKjYDRIthctTVe0EJi//nifl4MRld2b5D5LnuV9sezz54p6g==",
+      "path": "modelcontextprotocol.core/0.5.0-preview.1",
+      "hashPath": "modelcontextprotocol.core.0.5.0-preview.1.nupkg.sha512"
+    },
+    "System.Diagnostics.EventLog/10.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xfaHEHVDkMOOZR5S6ZGezD0+vekdH1Nx/9Ih8/rOqOGSOk1fxiN3u94bYkBW/wigj0Uw2Wt3vvRj9mtYdgwEjw==",
+      "path": "system.diagnostics.eventlog/10.0.1",
+      "hashPath": "system.diagnostics.eventlog.10.0.1.nupkg.sha512"
+    }
+  }
+}

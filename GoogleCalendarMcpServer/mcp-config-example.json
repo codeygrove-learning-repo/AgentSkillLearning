@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "google-calendar": {
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "path/to/GoogleCalendarMcpServer/GoogleCalendarMcpServer.csproj"
+      ]
+    }
+  }
+}
