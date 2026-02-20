@@ -19,7 +19,7 @@ jobs:
             
             ## Acceptance Criteria
             ${{ github.event.client_payload.criteria }}" \
-            --assignee "@copilot")
+            --label "agent:work")
           echo "issue_url=$ISSUE_URL" >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
