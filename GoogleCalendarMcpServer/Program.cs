@@ -128,7 +128,7 @@ public static class GoogleCalendarTools
             var url = $"https://www.googleapis.com/calendar/v3/calendars/{calendarId}/events?timeMin={timeMin}&timeMax={timeMax}&singleEvents=true&orderBy=startTime";
 
             // Add authorization header
-            var request = new HttpRequestMessage(HttpMethod.Get, url);
+            using var request = new HttpRequestMessage(HttpMethod.Get, url);
             request.Headers.Add("Authorization", $"Bearer {accessToken}");
 
             var response = await httpClient.SendAsync(request, cancellationToken);
