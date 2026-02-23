@@ -174,9 +174,9 @@ public static class GoogleCalendarTools
                                 calendarEvent.Start = parsedStart;
                             }
                         }
-                        else if (start.TryGetProperty("date", out var startDate_))
+                        else if (start.TryGetProperty("date", out var startDateProperty))
                         {
-                            if (DateTime.TryParse(startDate_.GetString(), out var parsedStart))
+                            if (DateTime.TryParse(startDateProperty.GetString(), out var parsedStart))
                             {
                                 calendarEvent.Start = parsedStart;
                             }
@@ -193,9 +193,9 @@ public static class GoogleCalendarTools
                                 calendarEvent.End = parsedEnd;
                             }
                         }
-                        else if (end.TryGetProperty("date", out var endDate_))
+                        else if (end.TryGetProperty("date", out var endDateProperty))
                         {
-                            if (DateTime.TryParse(endDate_.GetString(), out var parsedEnd))
+                            if (DateTime.TryParse(endDateProperty.GetString(), out var parsedEnd))
                             {
                                 calendarEvent.End = parsedEnd;
                             }
