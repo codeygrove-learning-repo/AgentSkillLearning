@@ -208,8 +208,9 @@ public static class GoogleCalendarTools
 
             return events;
         }
-        catch
+        catch (Exception ex)
         {
+            Console.Error.WriteLine($"Error while fetching or parsing calendar events: {ex}");
             return null;
         }
     }
