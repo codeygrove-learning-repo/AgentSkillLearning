@@ -139,7 +139,7 @@ public static class GoogleCalendarTools
             }
 
             var content = await response.Content.ReadAsStringAsync(cancellationToken);
-            var json = JsonDocument.Parse(content);
+            using var json = JsonDocument.Parse(content);
 
             var events = new List<CalendarEvent>();
 
