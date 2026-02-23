@@ -230,9 +230,11 @@ public static class GoogleCalendarTools
         {
             if (evt.Start.HasValue && evt.End.HasValue)
             {
-                var date = evt.Start.Value.ToString("dd MMM yyyy");
-                var startTime = evt.Start.Value.ToString("HH:mm");
-                var endTime = evt.End.Value.ToString("HH:mm");
+                var startLocal = evt.Start.Value.ToLocalTime();
+                var endLocal = evt.End.Value.ToLocalTime();
+                var date = startLocal.ToString("dd MMM yyyy");
+                var startTime = startLocal.ToString("HH:mm");
+                var endTime = endLocal.ToString("HH:mm");
 
                 result.Append($"{date} from {startTime} - {endTime}");
 
